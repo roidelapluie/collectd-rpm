@@ -20,7 +20,7 @@ cp collectd-5.4.2.tar.bz2 /usr/src/redhat/SOURCES/
 sed -i s/5.4.0/5.4.2/ collectd-5.4.2/contrib/redhat/collectd.spec
 
 # Install dependencies of the spec file
-yum install -y $(egrep "^BuildRequires" collectd-5.4.1/contrib/redhat/collectd.spec | cut -d ':' -f 2 | tr -d ' \t' | sed 's/,/\n/' | uniq | sed 's/$/ /' | tr -d '\n')
+yum install -y $(egrep "^BuildRequires" collectd-5.4.2/contrib/redhat/collectd.spec | cut -d ':' -f 2 | tr -d ' \t' | sed 's/,/\n/' | uniq | sed 's/$/ /' | tr -d '\n')
 
 # Create RPMS
 rpmbuild -bb collectd-5.4.2/contrib/redhat/collectd.spec
