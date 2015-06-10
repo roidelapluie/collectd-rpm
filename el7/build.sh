@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Install tools required to build the rpms
-yum install -y rpm-build yum-utils rpmdevtools
-
-# Install EPEL
-rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+yum install -y rpm-build yum-utils rpmdevtools epel-release
 
 # Go to /tmp to get and extract collectd source base
 cd /tmp

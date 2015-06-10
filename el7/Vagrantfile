@@ -5,8 +5,8 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "puppetlabs/centos-5.11-64-nocm"
-  config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/centos-5.11-64-nocm"
+  config.vm.box = "puppetlabs/centos-7.0-64-nocm"
+  config.vm.box_url = "https://atlas.hashicorp.com/puppetlabs/boxes/centos-7.0-64-nocm"
 
   config.vm.provision "shell", path: "build.sh"
 
